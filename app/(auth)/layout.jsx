@@ -1,6 +1,7 @@
+import '../globals.css'
+
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { cookies } from 'next/headers'
-import '../globals.css'
 import { redirect } from 'next/navigation'
 
 export const metadata = {

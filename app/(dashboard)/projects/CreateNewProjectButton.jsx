@@ -1,6 +1,6 @@
 'use client'
-import React, { useState } from 'react'
 
+import { useState } from 'react'
 import { Dialog, Button, Flex, Text, TextField } from '@radix-ui/themes'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import { useRouter } from 'next/navigation'
@@ -8,7 +8,6 @@ import { useRouter } from 'next/navigation'
 export default function CreateNewProjectButton({ handleAction }) {
 
     const [name, setName] = useState('')
-    const router = useRouter()
 
     const handleChange = (e) => {
         console.log(e.target.value)
@@ -28,7 +27,6 @@ export default function CreateNewProjectButton({ handleAction }) {
         })
 
         console.log(error)
-        router.refresh()
 
     }
 
@@ -63,7 +61,6 @@ export default function CreateNewProjectButton({ handleAction }) {
                             </Button>
                         </Dialog.Close>
                         <Dialog.Close>
-                            {/* <button className='bg-black text-white' type='submit'>save</button> */}
                             <Button onClick={addProject} type='submit'>Save</Button>
                         </Dialog.Close>
                     </Flex>

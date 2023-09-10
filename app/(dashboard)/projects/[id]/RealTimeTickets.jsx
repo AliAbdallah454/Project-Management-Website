@@ -1,6 +1,7 @@
 'use client'
 
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
+
 import Ticket from './Ticket'
 
 export default function RealTimeTickets({ tickets }) {

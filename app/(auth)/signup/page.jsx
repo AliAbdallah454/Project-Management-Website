@@ -1,8 +1,9 @@
 'use client'
 
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
-import AuthPage from '../AuthPage'
 import { useRouter } from 'next/navigation'
+
+import AuthPage from '../AuthPage'
 
 export default function Signup() {
 

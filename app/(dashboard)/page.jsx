@@ -1,4 +1,5 @@
 import Image from 'next/image'
+
 import teamWork from '@/public/teamWork.jpg'
 
 export default async function Home() {

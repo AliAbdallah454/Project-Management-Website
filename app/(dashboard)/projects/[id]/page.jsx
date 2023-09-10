@@ -2,6 +2,7 @@
 
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import { useEffect, useState } from 'react'
+
 import AddTicketButton from './AddTicketButton'
 import RealTimeTickets from './RealTimeTickets'
 

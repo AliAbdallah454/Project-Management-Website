@@ -1,8 +1,7 @@
 'use client'
 
-import React from 'react'
-import Link from 'next/link'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
+import Link from 'next/link'
 
 export default function Project({ name, projectId }) {
 

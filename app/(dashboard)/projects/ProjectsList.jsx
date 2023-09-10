@@ -8,6 +8,16 @@ export default function ProjectsList() {
 
     const [projects, setProjects] = useState([])
 
+    const supabase = createClientComponentClient()
+
+    supabase.channel('realTimeTickets').on('postgres_changes', {
+        event: "*",
+        schema: "public",
+        table: 'projects'
+    }, () => {
+        window.location.reload()
+    }).subscribe()
+
     useEffect(() => {
         const getProjects = async () => {
 

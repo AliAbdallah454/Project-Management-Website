@@ -31,7 +31,7 @@ export default function Ticket({ title, body, severity, ticketId }) {
             <p className='py-5 '>{ body }</p>
             <p className={`${severityTextColor} font-bold text-xl`}>{ severity }</p>
 
-            <button className='w-full mt-2 p-2 border-2 border-black font-bold rounded-xl bg-black text-white hover:bg-white hover:text-black' onClick={ handleDelete }>Delete</button>
+            <button onClick={ handleDelete }>Delete Ticket</button>
 
         </div>
     )

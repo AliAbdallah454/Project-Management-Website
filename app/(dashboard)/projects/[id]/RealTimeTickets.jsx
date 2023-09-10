@@ -16,7 +16,7 @@ export default function RealTimeTickets({ tickets }) {
     }).subscribe()
 
     return (
-        <div>
+        <div className='flex justify-between flex-wrap'>
             {tickets.map(ticket => <Ticket
                 key={ ticket.id }
                 title={ ticket.title }

@@ -28,9 +28,9 @@ export default function AuthPage({ title, buttonText, alternativeText, href, han
                     <div className='mt-15 flex flex-col items-center'>
                         <h1 className='p-5 font-bold text-xl'>{ title }</h1>
 
-                        <form action={() => handleAction(email, password)}>
-                            <InputForm text="Email" type="text" onChange={(e) => setEmail(e.target.value)}/>
-                            <InputForm text="Password" type="password" onChange={(e) => setPassword(e.target.value)}/>
+                        <form onSubmit={ (e) => handleAction(e, email, password) }>
+                            <InputForm name="email" text="Email" type="text" onChange={(e) => setEmail(e.target.value)}/>
+                            <InputForm name="password" text="Password" type="password" onChange={(e) => setPassword(e.target.value)}/>
                             
                             <div className='my-4'></div>
 

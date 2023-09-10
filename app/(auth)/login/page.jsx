@@ -1,12 +1,31 @@
+'use client'
+
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
+import { useRouter } from 'next/navigation'
+
 import AuthPage from '../AuthPage'
-import { redirect } from 'next/navigation'
 
 export default function Login() {
 
-	const loginAction = async (email, password) => {
-		'use server'
-		console.log('LOGIN', email, password)
-		redirect("/")
+    const router = useRouter()
+
+	const loginAction = async (e, email, password) => {
+
+        e.preventDefault()
+
+        const supabase = createClientComponentClient()
+        const { error } = await supabase.auth.signInWithPassword({
+            email: email,
+            password: password
+        })
+
+        if(error){
+            console.log("ERRRR")
+        }
+        else{
+            router.push("/")
+        }
+
 	}
 
 	return (
